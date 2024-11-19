@@ -1,0 +1,425 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+}
+
+/* Main Section */
+.main {
+  position: relative;
+  margin-top: 65px;
+  width: 100%;
+  height: 80vh;
+  background-image: url('assets/background.jpg'); /* Replace with the path to your image */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+/* Centered Content */
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  color: #07233f;
+  text-align: center;
+  padding-top: 100px; /* Adjust as needed */
+  outline: 0px solid #00aced;
+  outline-offset: 15px;
+  z-index: 2;
+  position: relative;
+}
+
+.content h1 {
+  font-size: 65px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.content h1 span {
+  color: #00aced;
+}
+
+.content p {
+  font-size: 24px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Button */
+.cn {
+  width: 160px;
+  height: 40px;
+  background-color: #00aced;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0 auto; /* Centers the button */
+}
+
+.cn a {
+  text-decoration: none;
+  color: #07233f;
+  font-size: 18px;
+  line-height: 40px;
+  display: block;
+}
+
+.cn:hover {
+  border: 2px solid #f3f3f3;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  height: 65px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  border-bottom: 3px solid #eee8e8ec;
+  background: #07233f;
+  z-index: 100;
+}
+
+.navbar h2.logo {
+  color: #fff;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 40px;
+  font-weight: bold;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+}
+
+.menu ul li {
+  margin: 0 18px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.menu ul li a:hover {
+  color: #00aced;
+}
+
+
+
+  
+  
+  /* What We Offer Section */
+  .main-section {
+  padding:    50px 0;
+  border-top: 2px solid #eee8e8ec;
+  }
+  
+  .main-section .headers {
+    height: 110px;
+  }
+  
+  .main-section h2 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #07233f;
+  font-size: 32px;
+  }
+  
+  .main-section h6 {
+  text-align: center;
+  color: #07233f;
+  font-size: 16px;
+  }
+  
+  .container {
+  width: 85%;
+  margin: auto;
+  }
+  
+  .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+  }
+  
+  /* Service List with Slide-in Animation */
+  .service-list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateX(-100px); /* Start from left */
+  animation: slideIn 1s ease-in-out forwards; /* Slide-in animation */
+  }
+  
+  .service-list:nth-child(1) {
+  animation-delay: 0.3s;
+  }
+  
+  .service-list:nth-child(2) {
+  animation-delay: 0.6s;
+  }
+  
+  .service-list:nth-child(3) {
+  animation-delay: 0.9s;
+  }
+  
+  .service-list:nth-child(4) {
+  animation-delay: 1.2s;
+  }
+  
+  @keyframes slideIn {
+  to {
+      opacity: 1;
+      transform: translateX(0); /* Moves back to original position */
+  }
+  }
+  
+  .service-list-col1 {
+  font-size: 36px;
+  color: #00aced;
+  margin-right: 15px;
+  margin-bottom: 15px ;
+  }
+  
+  .service-list-col2 h3 {
+  margin: 0;
+  color: #00aced;
+  }
+  
+  .service-list-col2 p {
+  margin: 5px 0 0;
+  color: #07233f;
+  }
+  
+  /* Image Adjustment: Match height of the topics */
+  .offer-image {
+  height: 100%; /* Ensure it spans the height of the topics */
+  max-height: 400px; /* Optional: Limit height to prevent it from becoming too large */
+  width: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  object-fit: contain; /* Ensures no cropping or distortion */
+  margin-right: 150px;
+  }
+  
+  /* Adjust the row to align the image with the topics */
+  .row {
+  display: flex;
+  align-items: center; /* Aligns the image with the service list vertically */
+  justify-content: space-between; /* Keeps space between the two sections */
+  }
+  
+  .service-list-container {
+    outline: 3px solid #00aced;
+    outline-offset: 15px;
+    
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+  .navbar .menu ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+  
+  .row {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .service-list {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  
+  .offer-image {
+      max-width: 100%; /* Ensures the image is responsive */
+  }
+  }
+  
+  
+  /* Testimonials */
+  /* Testimonials Section */
+  .testimonials-section {
+    background-image: linear-gradient(#09243f, #07233f) !important; /* Same as main background for consistency */
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden; /* Ensures animation doesn't affect other sections */
+    border-top: 2px solid white;
+  }
+  
+  .testimonials-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: #00aced; /* Consistent with main section headings */
+  }
+  
+  .testimonial-box {
+    background-color: white; /* Consistent with other sections */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0; /* Initially invisible for animation */
+    transform: translateY(50px); /* Starts below the visible area */
+    transition: opacity 2.5s ease-out, transform 2.5s ease-out; /* Smooth transition */
+  }
+  
+  .testimonial-box p {
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #6c757d; /* Keeping consistent with the muted text color */
+  }
+  
+  .testimonial-box cite {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    font-size: 16px;
+    color: #00aced; /* Same as used in headings */
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .col-lg-4, .col-md-6, .col-sm-12 {
+    flex-basis: 31%;
+    margin-bottom: 20px;
+  }
+  
+  /* Animation: Trigger when in viewport */
+  .testimonial-box.show {
+    opacity: 1;
+    transform: translateY(0); /* Slides up into view */
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .col-lg-4, .col-md-6, .col-sm-12 {
+        flex-basis: 100%;
+    }
+  }
+  
+  /* FOOTER */
+  body {
+    margin: 0; /* Reset body margin */
+  }
+  
+  footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 175px; /* Increase footer height */
+    overflow: hidden;
+    background: #07233f;
+  }
+  
+  .background {
+    position: absolute;
+    bottom: -20px; /* Move SVG slightly down */
+    left: 0;
+    width: 100%;
+    height: 450%; /* Increase SVG height */
+    z-index: 0;
+  }
+  
+  svg {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  
+  
+  /* Section Styling */
+  section {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 140px; /* Increase bottom padding to move content up */
+    padding-top: 20px;
+    width: 100%;
+  }
+  
+  .legal {
+    font-size: 12px;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom : 15px;
+    /* Add slight space above legal text */
+  }
+  
+  
+  /* List and Link Styling */
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .socials {
+    gap: 20px; /* Space between social icons */
+  }
+  
+  .socials a {
+    font-size: 24px; /* Font size for social links */
+  }
+  
+  .links {
+    gap: 10px; /* Space between links */
+  }
+  
+  
+  
+  /* Media Query for Responsive Design */
+  @media (min-width: 420px) {
+    section {
+      align-items: center; /* Center items in larger screens */
+      padding-left: 0; /* Remove left padding on larger screens */
+      gap: 20px; /* Adjust gap */
+    }
+  
+    .links {
+      gap: 20px; /* Adjust link gap */
+    }
+  }
+  
